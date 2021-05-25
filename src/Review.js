@@ -34,8 +34,11 @@ const Review = () => {
 
   const randomPerson = () => {
     setIndex(idex => {
-      let newIndex = Math.floor(Math.random() * people.length);
-      return checkNumber(newIndex);
+      let randomNumber = Math.floor(Math.random() * people.length);
+      if(randomNumber === index){
+        randomNumber = index+ 1;
+      }
+      return checkNumber(randomNumber);
     });
   };
 
