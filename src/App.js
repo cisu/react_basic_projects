@@ -1,7 +1,14 @@
 import React from 'react';
 import Review from './Review';
-function App() {
-  return <h2>reviews project setup</h2>;
-}
+import {FaGithubSquare} from 'react-icons/fa';
+
+const App = () => {
+  return (
+    <h2>
+      reviews project setup
+      <FaGithubSquare className='icon'/>
+    </h2>
+  );
+};
 
 export default App;
