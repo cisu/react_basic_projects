@@ -157,7 +157,8 @@ Menu
   margin-right: auto;
 }
 .btn-container {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
