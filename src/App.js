@@ -1,22 +1,10 @@
-import React, {useState} from 'react';
-import data from './data';
-import SingleQuestion from './Question';
+import React, { useState } from 'react';
+import Menu from './Menu';
+import Categories from './Categories';
+import items from './data';
 
 function App() {
-  const [questions, setQuestion] = useState(data);
-
-  return (
-    <main>
-      <div className='container'>
-        <h3>questions and answers about login</h3>
-        <section>
-          {questions.map(question => {
-            return <SingleQuestion key={question.id} {...question} />;
-          })}
-        </section>
-      </div>
-    </main>
-  );
+  return <h2>menu project setup</h2>;
 }
 
 export default App;
