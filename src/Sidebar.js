@@ -1,25 +1,10 @@
-import React from 'react';
-import {links} from './data';
+import React from 'react'
+import logo from './logo.svg'
+import { FaTimes } from 'react-icons/fa'
+import { social, links } from './data'
 
 const Sidebar = () => {
-  return (
-    <>
-    <h4>Sidebar</h4>
-      <div className='links-container show-container'>
-        <ul className='links'>
-          {links.map(link => {
-            const {id, url, text} = link;
+  return <h2>sidebar</h2>
+}
 
-            return (
-              <li key={id}>
-                <a href={url}>{text}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </>
-  );
-};
-
-export default Sidebar;
+export default Sidebar
