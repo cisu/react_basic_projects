@@ -17,7 +17,7 @@ const Sidebar = () => {
         {links.map(link => {
           const {id, url, text, icon} = link;
           return (
-            <li key='id'>
+            <li key={id}>
               <a href={url}>
                 {icon}
                 {text}
@@ -31,7 +31,7 @@ const Sidebar = () => {
           const {id, url, icon} = link;
 
           return (
-            <li kay='id'>
+            <li key={id}>
               <a href={url}>{icon}</a>
             </li>
           );
