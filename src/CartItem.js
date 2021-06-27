@@ -1,6 +1,7 @@
-import React from 'react'
-import { useGlobalContext } from './context'
-const CartItem = ({ id, img, title, price, amount }) => {
+import React from 'react';
+import {useGlobalContext} from './context';
+
+const CartItem = ({id, img, title, price, amount}) => {
   return (
     <article className='cart-item'>
       <img src={img} alt={title} />
@@ -32,7 +33,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         </button>
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default CartItem
+export default CartItem;
