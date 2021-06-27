@@ -1,53 +1,27 @@
-import React, {useState, useContext} from 'react';
-import sublinks from './data';
+import React, { useState, useContext, useReducer, useEffect } from 'react'
+import cartItems from './data'
+import reducer from './reducer'
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/react-useReducer-cart-project'
+const AppContext = React.createContext()
 
-const AppContext = React.createContext();
-
-export const AppProvider = ({children}) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-
-  const [location, setLocation] = useState({});
-
-  const [page, setPage] = useState({page: '', links: []});
-
-  const openSidebar = () => {
-    setIsSidebarOpen(true);
-  };
-
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
-
-  const openSubmenu = (text, coordinates) => {
-    const page = sublinks.find((link) => link.page === text);
-    setPage(page);
-    setLocation(coordinates);
-    setIsSubmenuOpen(true);
-  };
-
-  const closeSubmenu = () => {
-    setIsSubmenuOpen(false);
-  };
+const AppProvider = ({ children }) => {
+  const [cart, setCart] = useState(cartItems)
 
   return (
     <AppContext.Provider
       value={{
-        isSubmenuOpen,
-        isSidebarOpen,
-        openSubmenu,
-        openSidebar,
-        closeSubmenu,
-        closeSidebar,
-        location,
-        page
+        cart,
       }}
     >
       {children}
     </AppContext.Provider>
-  );
-};
-
+  )
+}
+// make sure use
 export const useGlobalContext = () => {
-  return useContext(AppContext);
-};
+  return useContext(AppContext)
+}
+
+export { AppContext, AppProvider }
