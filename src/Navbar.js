@@ -15,7 +15,7 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-      </div>
+    
 
       <ul className='nav-links'>
         <li>
@@ -29,6 +29,7 @@ const Navbar = () => {
         </li>
       </ul>
       <button className="btn signin-btn">Sign in</button>
+      </div>
     </nav>
   );
 };
