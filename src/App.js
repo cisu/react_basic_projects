@@ -1,28 +1,18 @@
-import React from 'react';
-import {useGlobalContext} from './context';
-
-// components
-import Navbar from './Navbar';
-import CartContainer from './CartContainer';
-// items
-
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+// import pages
+import Home from './pages/Home'
+import About from './pages/About'
+import SingleCocktail from './pages/SingleCocktail'
+import Error from './pages/Error'
+// import components
+import Navbar from './components/Navbar'
 function App() {
-  const {loading} = useGlobalContext();
-
-  if (loading) {
-    return (
-      <div className='loading'>
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
-
   return (
-    <main>
-      <Navbar />
-      <CartContainer />
-    </main>
-  );
+    <div>
+      <h2>app component</h2>
+    </div>
+  )
 }
 
-export default App;
+export default App
