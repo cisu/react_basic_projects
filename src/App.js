@@ -9,7 +9,7 @@ import Error from './pages/Error';
 
 // import components
 import Navbar from './components/Navbar';
-import {Nav} from 'react-bootstrap';
+// import {Nav} from 'react-bootstrap';
 
 function App() {
   return (
